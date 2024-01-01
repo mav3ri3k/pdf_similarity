@@ -14,26 +14,27 @@ def clean(str):
     else:
         return str
 
-def find_file(name, startingPath="."):
+def find_pdfs(startingPath="."):
     """find_path(name of file, starting path for search(default = "."))
        return {name, extension, filepath}
     recursively searches for given file name in given path
     reaise KeyError if file not found
     """
+    pdfs = []
     path = startingPath
     absolutePath = os.path.abspath(path)
 
     for root, _, f_names in os.walk(path):
         for file in f_names:
             filepath = f"{absolutePath}/{clean(root)}/{file}"
-            extension = os.path.splitext('my_file.txt')[1][1:]
+            extension = file.split(".")[-1]
 
-            if name == file:
-                return {"name": name,
-                        "extension":f".{extension}",
-                        "filepath":filepath
-                        }
-    raise KeyError(f"File: {name}, not found in {absolutePath}")
-
-print(find_file("States.h", "."))
-find_file("Main.cpp", ".")
+            if extension == "pdf":
+                pdf = {
+                    "name": file,
+                    "path": filepath
+                }
+                pdfs.append(pdf)
+    # raise KeyError(f"File: {name}, not found in {absolutePath}")
+    return pdfs
+print(find_pdfs("."))

@@ -1,7 +1,7 @@
 # Pdf Similarity
 The module provides similarity ratio between pdfs in a given directory.
 
-K-gram fingerprint for each pdf is generated using [Winnowing Algorithm](http://theory.stanford.edu/~aiken/publications/papers/sigmod03.pdf). Then fingerprints are compared using the [levenshtein algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance). This is used to generate levenshtein distance matrix between pdf. This matrix is then normalized for obtain ratios between [0,1], where 0 means exactly same and 1 means completely different pdfs.
+K-gram fingerprint for each pdf is generated using [Winnowing Algorithm](http://theory.stanford.edu/~aiken/publications/papers/sigmod03.pdf). Then fingerprints are compared using the [levenshtein algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance). This is used to generate levenshtein distance matrix between pdf. This matrix is then normalized to obtain ratios between [0,1], where 0 means exactly same and 1 means completely different pdfs.
 
 ## Example 
 

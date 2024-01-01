@@ -1,5 +1,5 @@
-import fingerprint 
-from algo import distance
+from PdfSim.util.algo.fingerprint import Fingerprint 
+from PdfSim.util.algo.algo import distance
 
 class Similarity:
     """find similarity between given strings"""
@@ -23,7 +23,7 @@ class Similarity:
 
     def get_fingerprints(self):
         """list of fingerprints for each string"""
-        fprint = fingerprint.Fingerprint(kgram_len=100)
+        fprint = Fingerprint(kgram_len=100)
         fp = fprint.generate
 
         self.fingerprints = [fp(item) for item in self.strings]

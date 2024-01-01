@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "PdfSim"
+version = "0.0.1"
+authors = [
+  { name="Apurva Mishra", email="me@apurva-mishra.com" },
+]
+description = "Find similarity between pdf"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/mav3ri3k/pdf_similarity"
+Issues = "https://github.com/mav3ri3k/pdf_similarity/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/PdfSim"]

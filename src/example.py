@@ -1,4 +1,4 @@
-from PdfSim.pdf_similarity import Pdf_Similarity 
+from src.pdf_similarity import Pdf_Similarity 
 ps = Pdf_Similarity()
 
 # Automatically find pdfs in currenly directory and print ratios
